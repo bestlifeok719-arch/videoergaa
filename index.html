@@ -24,7 +24,7 @@ h2{font-size:15px;font-weight:700;color:var(--mu);margin:18px 0 8px}
 .chip{border-radius:999px;padding:9px 16px;font-weight:600}
 .on{outline:3px solid var(--ro);background:#fff0f8}
 .step{background:#fff;border-radius:16px;padding:10px;margin-bottom:8px;display:grid;grid-template-columns:1fr 1.6fr auto;gap:8px}
-.step input[type=text]{grid-column:1/-1}.step input.n{grid-column:auto}.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.g2 label{font-size:13px;color:var(--mu)}details>summary{list-style:none}.clip{grid-template-columns:1fr 1fr!important}.clip .x{grid-column:1/-1;width:100%;padding:6px}.lb{font-size:12px;color:var(--mu);display:block}.tr{display:flex;align-items:center;gap:6px;margin-bottom:3px}.tr span{width:46px;font-size:11px;color:var(--mu);flex:none}.tr div{position:relative;height:12px;flex:1;background:#f3e8ff;border-radius:6px;overflow:hidden}.tr i{position:absolute;top:0;height:100%;border-radius:4px;opacity:.9}.step .e{grid-column:1/3}.step .mic{border:0;border-radius:12px;background:#f3e8ff;font:inherit;padding:0 10px;cursor:pointer}.step .vo{grid-column:1/-1;font-size:14px;color:var(--mu);display:flex;gap:12px;align-items:center}.step .vo button{border:0;background:#fde7f3;border-radius:10px;padding:4px 10px;cursor:pointer;font:inherit}
+.step input[type=text]{grid-column:1/-1}.step input.n{grid-column:auto}.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.g2 label{font-size:13px;color:var(--mu)}details>summary{list-style:none}.sub{margin-top:8px;border-top:1px dashed #e9c8dc;padding-top:6px}.sub>summary{cursor:pointer;font-weight:700;color:var(--pl);padding:6px 0}.pc>summary b{font-size:17px}.clip{grid-template-columns:1fr 1fr!important}.clip .x{grid-column:1/-1;width:100%;padding:6px}.lb{font-size:12px;color:var(--mu);display:block}.tr{display:flex;align-items:center;gap:6px;margin-bottom:3px}.tr span{width:46px;font-size:11px;color:var(--mu);flex:none}.tr div{position:relative;height:12px;flex:1;background:#f3e8ff;border-radius:6px;overflow:hidden}.tr i{position:absolute;top:0;height:100%;border-radius:4px;opacity:.9}.step .e{grid-column:1/3}.step .mic{border:0;border-radius:12px;background:#f3e8ff;font:inherit;padding:0 10px;cursor:pointer}.step .vo{grid-column:1/-1;font-size:14px;color:var(--mu);display:flex;gap:12px;align-items:center}.step .vo button{border:0;background:#fde7f3;border-radius:10px;padding:4px 10px;cursor:pointer;font:inherit}
 .step .x{border:0;background:#fde7f3;border-radius:12px;width:40px;font-size:18px;cursor:pointer}
 textarea,input,select{width:100%;font:inherit;border:2px solid #e9c8dc;border-radius:12px;padding:10px;background:#fff;color:var(--ink)}
 .go{display:block;width:100%;border:0;border-radius:999px;padding:16px;margin-top:16px;font:inherit;font-size:18px;font-weight:800;color:#fff;background:linear-gradient(90deg,var(--or),var(--ro));cursor:pointer}
@@ -40,9 +40,9 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid 
 <script>
 const $=s=>document.querySelector(s),L=localStorage;
 const T={
-om:{n:"Afaan Oromoo",t:"Video Ergaa",cat:"Gosa video filadhu",ch:"Fakkii filadhu",sc:"Bakka",pp:"Namoota (hanga 4)",stp:"Tarkaanfiiwwan",add:"+ Tarkaanfii dabali",say:"Dubbii (dirqama miti)",dur:"Dheerina video",gn:"Gosa seenaa",arr:"Bifa dhaabbii",att:"Amala (dhaggeeffachuu)",ipos:"Bakka eegaluu",fcg:"Gara eessa ilaala",turns:"Dabaree dabareen tarreessi (ofumaa)",st0:"Eegaluu (sek)",du:"Dheerina (sek)",vol:"Sagalee (%)",wk:"Nama",tlh:"Gabatee yeroo",addc:"+ Dabali",endn:"0 = hanga dhumaatti",trk:"Sochii nama tokko tokkoof (tarree yeroo)",addg:"+ Sochii dabali",ppl:"Namoota",rm:"Haqi",len:"Dheerina video",cam:"Kaameraa",role:"Gosa nama",hgt:"Dheerina",bld:"Ijaarsa",skn:"Halluu gogaa",hrs:"Rifeensa",hcl:"Halluu rifeensaa",bd:"Areeda",vcx:"Sagalee",adn:"Video sekondii 15 ol hojjechuuf beeksisa gabaabaa ilaali.",adf:"Beeksisni hin argamne. Irra deebi'ii yaali.",tr1:"1. Gosa video filadhu",tr2:"2. Fakkii, bakka fi ergaa filadhu (ykn sagalee kee waraabi)",tr3:"3. Video hojjedhu, itti aansee qoodi",nxt:"Itti fufi",skp:"Irra tarkaanfadhu",gs:"Jalqabi",ex:"Fakkeenya (tuqii yaali)",fb:"Yaada nuuf ergi",fbp:"Yaada kee asitti barreessi...",fbs:"Ergi",err1:"Bilbilli kun video waraabuu hin deeggaru. Chrome (Android) fayyadami.",err2:"Rakkoon uumameera. Qulqullina gadi qabii (480p) irra deebi'ii yaali.",pv:"Dhuunfaa (privacy)",fo:"Fuula fi uffata ofii",ph:"📷 Suuraa",phn:"Suuraa ofii kee ykn eeyyama qabdu qofa fayyadami. Bilbila kee keessatti qofa kuufama.",mv:"Video koo",nov:"Video kuufame hin jiru.",sg:"Muuziqaa ofii kee (faayila)",sgn:"Muuziqaa kan abbaa isaa taate ykn eeyyama qabdu qofa fayyadami.",vf:"Sagalee (yoo waraabde)",mt:"🎤 Sagalee ofii kee waraabi: fakkiin afaan ishee sagalee kee wajjin socho'isti.",merr:"Maayikii hin argamne. Eeyyama maayikii kenni.",ql:"Qulqullina video",est:"Tilmaama guddina",nt:"2K: bilbila cimaa qofaaf",fm:"Bifa video (bakka itti qooddu)",sec:"sek",min:"daq",mu:"Muuziqaa",auto:"Ofumaa jijjiiramu",nm:"Maqaa (dirqama miti)",mk:"Video hojjedhu",sh:"Qoodi",dl:"Buusi",ag:"Irra deebi'ii hojjedhu",bk:"‹ Duubatti",ins:"Appii bilbila kee irratti ijaari",wt:"Video hojjetamaa jira...",keep:"Appii kana keessa turi, ibsaan bilbilaa banaa haa ta'u.",lg:"Afaan"},
-am:{n:"አማርኛ",t:"ቪዲዮ መልእክት",cat:"የቪዲዮ ዓይነት ይምረጡ",ch:"ገጸ ባህሪ ይምረጡ",sc:"ቦታ",pp:"ሰዎች (እስከ 4)",stp:"ደረጃዎች",add:"+ ደረጃ ጨምር",say:"የሚነገር (አማራጭ)",dur:"የቪዲዮ ርዝመት",gn:"የታሪክ ዓይነት",arr:"የአቀማመጥ ዓይነት",att:"ባህሪ (ሲያዳምጥ)",ipos:"የመጀመሪያ ቦታ",fcg:"ወደ የት ያያል",turns:"ተራ በተራ አስተካክል (አውቶ)",st0:"መጀመሪያ (ሰ)",du:"ርዝመት (ሰ)",vol:"ድምፅ (%)",wk:"ሰው",tlh:"የጊዜ ሰሌዳ",addc:"+ ጨምር",endn:"0 = እስከ መጨረሻ",trk:"የእያንዳንዱ ሰው እንቅስቃሴ (የጊዜ ሰሌዳ)",addg:"+ እንቅስቃሴ ጨምር",ppl:"ሰዎች",rm:"ሰርዝ",len:"የቪዲዮ ርዝመት",cam:"ካሜራ",role:"የሰው ዓይነት",hgt:"ቁመት",bld:"ሰውነት",skn:"የቆዳ ቀለም",hrs:"የፀጉር ስታይል",hcl:"የፀጉር ቀለም",bd:"ጢም",vcx:"ድምፅ",adn:"ከ15 ሰከንድ በላይ ለመሥራት አጭር ማስታወቂያ ይመልከቱ።",adf:"ማስታወቂያው አልተገኘም። እንደገና ይሞክሩ።",tr1:"1. የቪዲዮ ዓይነት ይምረጡ",tr2:"2. ገጸ ባህሪ፣ ቦታ እና መልእክት ይምረጡ (ወይም ድምፅዎን ይቅዱ)",tr3:"3. ቪዲዮ ይሥሩ፣ ከዚያ ያጋሩ",nxt:"ቀጥል",skp:"ዝለል",gs:"ጀምር",ex:"ምሳሌ (ነክተው ይሞክሩ)",fb:"አስተያየት ይላኩ",fbp:"አስተያየትዎን እዚህ ይጻፉ...",fbs:"ላክ",err1:"ይህ ስልክ ቪዲዮ መቅዳትን አይደግፍም። Chrome (Android) ይጠቀሙ።",err2:"ችግር ተፈጥሯል። ጥራቱን ይቀንሱ (480p) እና እንደገና ይሞክሩ።",pv:"ግላዊነት",fo:"የራስዎ ፊት እና ልብስ",ph:"📷 ፎቶ",phn:"የራስዎን ወይም ፈቃድ ያለዎትን ፎቶ ብቻ ይጠቀሙ። በስልክዎ ውስጥ ብቻ ይቀመጣል።",mv:"የእኔ ቪዲዮዎች",nov:"የተቀመጠ ቪዲዮ የለም።",sg:"የራስዎ ሙዚቃ (ፋይል)",sgn:"የራስዎ ወይም ፈቃድ ያለዎትን ሙዚቃ ብቻ ይጠቀሙ።",vf:"ድምፅ (ከቀረጹ)",mt:"🎤 ድምፅዎን ይቅዱ፤ ገጸ ባህሪው ከድምፅዎ ጋር አፉን ያንቀሳቅሳል።",merr:"ማይክሮፎን አልተገኘም። ፈቃድ ይስጡ።",ql:"የቪዲዮ ጥራት",est:"ግምታዊ መጠን",nt:"2K: ጠንካራ ስልክ ብቻ",fm:"የቪዲዮ ቅርጽ (የት እንደሚያጋሩ)",sec:"ሰከንድ",min:"ደቂቃ",mu:"ሙዚቃ",auto:"በራስ-ሰር ይቀያየራል",nm:"ስም (አማራጭ)",mk:"ቪዲዮ ሥራ",sh:"አጋራ",dl:"አውርድ",ag:"እንደገና ሥራ",bk:"‹ ተመለስ",ins:"መተግበሪያውን ስልክዎ ላይ ይጫኑ",wt:"ቪዲዮው እየተሠራ ነው...",keep:"በዚህ መተግበሪያ ውስጥ ይቆዩ፤ ስክሪኑ እንዲበራ ያድርጉ።",lg:"ቋንቋ"},
-en:{n:"English",t:"Video Message",cat:"Choose a video type",ch:"Choose a character",sc:"Place",pp:"People (up to 4)",stp:"Steps",add:"+ Add step",say:"Say (optional)",dur:"Video length",gn:"Story type",st0:"Start (s)",du:"Length (s)",vol:"Volume (%)",wk:"Person",tlh:"Timeline",addc:"+ Add",endn:"0 = until the end",arr:"Arrangement",att:"Attitude (when listening)",ipos:"Starting position",fcg:"Faces toward",turns:"Arrange turns one by one (auto)",trk:"Each person's actions (timeline)",addg:"+ Add action",ppl:"People",rm:"Remove",len:"Video length",cam:"Camera",role:"Type of person",hgt:"Height",bld:"Build",skn:"Skin",hrs:"Hair style",hcl:"Hair color",bd:"Beard",vcx:"Voice",adn:"Watch a short ad to make videos longer than 15 seconds.",adf:"The ad is not available. Please try again.",tr1:"1. Choose a video type",tr2:"2. Choose characters, place and message (or record your voice)",tr3:"3. Make the video, then share it",nxt:"Next",skp:"Skip",gs:"Start",ex:"Examples (tap to try)",fb:"Send feedback",fbp:"Write your feedback here...",fbs:"Send",err1:"This phone does not support video recording. Please use Chrome on Android.",err2:"Something went wrong. Lower the quality (480p) and try again.",pv:"Privacy",fo:"Your face and outfit",ph:"📷 Photo",phn:"Use only your own photo or one you have permission to use. It stays on your phone only.",mv:"My videos",nov:"No saved videos.",sg:"Your own music (file)",sgn:"Use only music you own or have permission to use.",vf:"Voice (if recorded)",mt:"🎤 Record your own voice; the character moves its mouth with it.",merr:"No microphone access. Please allow it.",ql:"Video quality",est:"Estimated size",nt:"2K: strong phones only",fm:"Video format (where you share)",sec:"s",min:"min",mu:"Music",auto:"Changes automatically",nm:"Name (optional)",mk:"Make video",sh:"Share",dl:"Download",ag:"Make again",bk:"‹ Back",ins:"Install the app on your phone",wt:"Making your video...",keep:"Stay in this app and keep the screen on.",lg:"Language"}};
+om:{n:"Afaan Oromoo",t:"Video Ergaa",cat:"Gosa video filadhu",ch:"Fakkii filadhu",sc:"Bakka",pp:"Namoota (hanga 4)",stp:"Tarkaanfiiwwan",add:"+ Tarkaanfii dabali",say:"Dubbii (dirqama miti)",dur:"Dheerina video",gn:"Gosa seenaa",grp:"Bifa waliigalaa (garee)",tod:"Yeroo",wxl:"Haala qilleensaa",pos:"Bakka dhaabbii",dpt:"Fagoo/dhiyoo",tn:"Gosa seenaa (nama kanaaf)",arr:"Bifa dhaabbii",att:"Amala (dhaggeeffachuu)",ipos:"Bakka eegaluu",fcg:"Gara eessa ilaala",turns:"Dabaree dabareen tarreessi (ofumaa)",st0:"Eegaluu (sek)",du:"Dheerina (sek)",vol:"Sagalee (%)",wk:"Nama",tlh:"Gabatee yeroo",addc:"+ Dabali",endn:"0 = hanga dhumaatti",trk:"Sochii nama tokko tokkoof (tarree yeroo)",addg:"+ Sochii dabali",ppl:"Namoota",rm:"Haqi",len:"Dheerina video",cam:"Kaameraa",role:"Gosa nama",hgt:"Dheerina",bld:"Ijaarsa",skn:"Halluu gogaa",hrs:"Rifeensa",hcl:"Halluu rifeensaa",bd:"Areeda",vcx:"Sagalee",adn:"Video sekondii 15 ol hojjechuuf beeksisa gabaabaa ilaali.",adf:"Beeksisni hin argamne. Irra deebi'ii yaali.",tr1:"1. Gosa video filadhu",tr2:"2. Fakkii, bakka fi ergaa filadhu (ykn sagalee kee waraabi)",tr3:"3. Video hojjedhu, itti aansee qoodi",nxt:"Itti fufi",skp:"Irra tarkaanfadhu",gs:"Jalqabi",ex:"Fakkeenya (tuqii yaali)",fb:"Yaada nuuf ergi",fbp:"Yaada kee asitti barreessi...",fbs:"Ergi",err1:"Bilbilli kun video waraabuu hin deeggaru. Chrome (Android) fayyadami.",err2:"Rakkoon uumameera. Qulqullina gadi qabii (480p) irra deebi'ii yaali.",pv:"Dhuunfaa (privacy)",fo:"Fuula fi uffata ofii",ph:"📷 Suuraa",phn:"Suuraa ofii kee ykn eeyyama qabdu qofa fayyadami. Bilbila kee keessatti qofa kuufama.",mv:"Video koo",nov:"Video kuufame hin jiru.",sg:"Muuziqaa ofii kee (faayila)",sgn:"Muuziqaa kan abbaa isaa taate ykn eeyyama qabdu qofa fayyadami.",vf:"Sagalee (yoo waraabde)",mt:"🎤 Sagalee ofii kee waraabi: fakkiin afaan ishee sagalee kee wajjin socho'isti.",merr:"Maayikii hin argamne. Eeyyama maayikii kenni.",ql:"Qulqullina video",est:"Tilmaama guddina",nt:"2K: bilbila cimaa qofaaf",fm:"Bifa video (bakka itti qooddu)",sec:"sek",min:"daq",mu:"Muuziqaa",auto:"Ofumaa jijjiiramu",nm:"Maqaa (dirqama miti)",mk:"Video hojjedhu",sh:"Qoodi",dl:"Buusi",ag:"Irra deebi'ii hojjedhu",bk:"‹ Duubatti",ins:"Appii bilbila kee irratti ijaari",wt:"Video hojjetamaa jira...",keep:"Appii kana keessa turi, ibsaan bilbilaa banaa haa ta'u.",lg:"Afaan"},
+am:{n:"አማርኛ",t:"ቪዲዮ መልእክት",cat:"የቪዲዮ ዓይነት ይምረጡ",ch:"ገጸ ባህሪ ይምረጡ",sc:"ቦታ",pp:"ሰዎች (እስከ 4)",stp:"ደረጃዎች",add:"+ ደረጃ ጨምር",say:"የሚነገር (አማራጭ)",dur:"የቪዲዮ ርዝመት",gn:"የታሪክ ዓይነት",grp:"አጠቃላይ (ቡድን)",tod:"ጊዜ",wxl:"የአየር ሁኔታ",pos:"የመቆሚያ ቦታ",dpt:"ርቀት",tn:"የታሪክ ዓይነት (ለዚህ ሰው)",arr:"የአቀማመጥ ዓይነት",att:"ባህሪ (ሲያዳምጥ)",ipos:"የመጀመሪያ ቦታ",fcg:"ወደ የት ያያል",turns:"ተራ በተራ አስተካክል (አውቶ)",st0:"መጀመሪያ (ሰ)",du:"ርዝመት (ሰ)",vol:"ድምፅ (%)",wk:"ሰው",tlh:"የጊዜ ሰሌዳ",addc:"+ ጨምር",endn:"0 = እስከ መጨረሻ",trk:"የእያንዳንዱ ሰው እንቅስቃሴ (የጊዜ ሰሌዳ)",addg:"+ እንቅስቃሴ ጨምር",ppl:"ሰዎች",rm:"ሰርዝ",len:"የቪዲዮ ርዝመት",cam:"ካሜራ",role:"የሰው ዓይነት",hgt:"ቁመት",bld:"ሰውነት",skn:"የቆዳ ቀለም",hrs:"የፀጉር ስታይል",hcl:"የፀጉር ቀለም",bd:"ጢም",vcx:"ድምፅ",adn:"ከ15 ሰከንድ በላይ ለመሥራት አጭር ማስታወቂያ ይመልከቱ።",adf:"ማስታወቂያው አልተገኘም። እንደገና ይሞክሩ።",tr1:"1. የቪዲዮ ዓይነት ይምረጡ",tr2:"2. ገጸ ባህሪ፣ ቦታ እና መልእክት ይምረጡ (ወይም ድምፅዎን ይቅዱ)",tr3:"3. ቪዲዮ ይሥሩ፣ ከዚያ ያጋሩ",nxt:"ቀጥል",skp:"ዝለል",gs:"ጀምር",ex:"ምሳሌ (ነክተው ይሞክሩ)",fb:"አስተያየት ይላኩ",fbp:"አስተያየትዎን እዚህ ይጻፉ...",fbs:"ላክ",err1:"ይህ ስልክ ቪዲዮ መቅዳትን አይደግፍም። Chrome (Android) ይጠቀሙ።",err2:"ችግር ተፈጥሯል። ጥራቱን ይቀንሱ (480p) እና እንደገና ይሞክሩ።",pv:"ግላዊነት",fo:"የራስዎ ፊት እና ልብስ",ph:"📷 ፎቶ",phn:"የራስዎን ወይም ፈቃድ ያለዎትን ፎቶ ብቻ ይጠቀሙ። በስልክዎ ውስጥ ብቻ ይቀመጣል።",mv:"የእኔ ቪዲዮዎች",nov:"የተቀመጠ ቪዲዮ የለም።",sg:"የራስዎ ሙዚቃ (ፋይል)",sgn:"የራስዎ ወይም ፈቃድ ያለዎትን ሙዚቃ ብቻ ይጠቀሙ።",vf:"ድምፅ (ከቀረጹ)",mt:"🎤 ድምፅዎን ይቅዱ፤ ገጸ ባህሪው ከድምፅዎ ጋር አፉን ያንቀሳቅሳል።",merr:"ማይክሮፎን አልተገኘም። ፈቃድ ይስጡ።",ql:"የቪዲዮ ጥራት",est:"ግምታዊ መጠን",nt:"2K: ጠንካራ ስልክ ብቻ",fm:"የቪዲዮ ቅርጽ (የት እንደሚያጋሩ)",sec:"ሰከንድ",min:"ደቂቃ",mu:"ሙዚቃ",auto:"በራስ-ሰር ይቀያየራል",nm:"ስም (አማራጭ)",mk:"ቪዲዮ ሥራ",sh:"አጋራ",dl:"አውርድ",ag:"እንደገና ሥራ",bk:"‹ ተመለስ",ins:"መተግበሪያውን ስልክዎ ላይ ይጫኑ",wt:"ቪዲዮው እየተሠራ ነው...",keep:"በዚህ መተግበሪያ ውስጥ ይቆዩ፤ ስክሪኑ እንዲበራ ያድርጉ።",lg:"ቋንቋ"},
+en:{n:"English",t:"Video Message",cat:"Choose a video type",ch:"Choose a character",sc:"Place",pp:"People (up to 4)",stp:"Steps",add:"+ Add step",say:"Say (optional)",dur:"Video length",gn:"Story type",st0:"Start (s)",du:"Length (s)",vol:"Volume (%)",wk:"Person",tlh:"Timeline",addc:"+ Add",endn:"0 = until the end",grp:"General (group)",tod:"Time",wxl:"Weather",pos:"Standing place",dpt:"Distance",tn:"Story type (for this person)",arr:"Arrangement",att:"Attitude (when listening)",ipos:"Starting position",fcg:"Faces toward",turns:"Arrange turns one by one (auto)",trk:"Each person's actions (timeline)",addg:"+ Add action",ppl:"People",rm:"Remove",len:"Video length",cam:"Camera",role:"Type of person",hgt:"Height",bld:"Build",skn:"Skin",hrs:"Hair style",hcl:"Hair color",bd:"Beard",vcx:"Voice",adn:"Watch a short ad to make videos longer than 15 seconds.",adf:"The ad is not available. Please try again.",tr1:"1. Choose a video type",tr2:"2. Choose characters, place and message (or record your voice)",tr3:"3. Make the video, then share it",nxt:"Next",skp:"Skip",gs:"Start",ex:"Examples (tap to try)",fb:"Send feedback",fbp:"Write your feedback here...",fbs:"Send",err1:"This phone does not support video recording. Please use Chrome on Android.",err2:"Something went wrong. Lower the quality (480p) and try again.",pv:"Privacy",fo:"Your face and outfit",ph:"📷 Photo",phn:"Use only your own photo or one you have permission to use. It stays on your phone only.",mv:"My videos",nov:"No saved videos.",sg:"Your own music (file)",sgn:"Use only music you own or have permission to use.",vf:"Voice (if recorded)",mt:"🎤 Record your own voice; the character moves its mouth with it.",merr:"No microphone access. Please allow it.",ql:"Video quality",est:"Estimated size",nt:"2K: strong phones only",fm:"Video format (where you share)",sec:"s",min:"min",mu:"Music",auto:"Changes automatically",nm:"Name (optional)",mk:"Make video",sh:"Share",dl:"Download",ag:"Make again",bk:"‹ Back",ins:"Install the app on your phone",wt:"Making your video...",keep:"Stay in this app and keep the screen on.",lg:"Language"}};
 const C=[
 {om:"Baga Gammaddan",am:"እንኳን አደረሳችሁ",en:"Greetings",m:{om:["Baga ayyaanaan isin gahe!","Baga gammaddan, jireenyi keessan gammachuun haa guutamu!"],am:["እንኳን አደረሳችሁ!","እንኳን ደስ አላችሁ!"],en:["Happy holiday to you!","Congratulations and best wishes!"]}},
 {om:"Fuudhaa fi Heerumaa",am:"ሰርግ",en:"Wedding",m:{om:["Baga gaa'ela keessan isin gahe!","Jaalalli keessan yeroo hundumaa haa jiraatu."],am:["እንኳን ለሠርጋችሁ አደረሳችሁ!","ፍቅራችሁ ዘላለማዊ ይሁን።"],en:["Congratulations on your wedding!","Wishing you a lifetime of love."]}},
@@ -75,7 +75,7 @@ const HS=[["short","Gabaabaa","አጭር","Short"],["long","Dheeraa","ረጅም"
 const TALLS=[[.92,"Gabaabaa","አጭር","Short"],[1,"Giddu galeessa","መካከለኛ","Medium"],[1.08,"Dheeraa","ረጅም","Tall"]],BLDS=[[0,"Qal'aa","ቀጭን","Slim"],[1,"Giddu galeessa","መካከለኛ","Medium"],[2,"Furdaa","ወፍራም","Heavy"]],CAMS=[["auto","Ofumaa (nama dubbatu irratti)","አውቶ (በተናጋሪው ላይ)","Auto (on speaker)"],["wide","Bal'aa (hunda agarsiisa)","ሰፊ (ሁሉንም)","Wide (shows all)"]],POST=[["s","Dhaabbii","ቆሞ","Standing"],["t","Taa'ee","ተቀምጦ","Sitting"]];
 const SKIN=["#f1c9a5","#e0ac69","#c68642","#8d5524","#5c3a21"],HC=["#1b1b1b","#3a2314","#7c4a21","#b45309","#e5e7eb"],COLS=["#a855f7","#3b82f6","#f43f8e","#10b981","#f59e0b","#ec4899","#0ea5e9","#84cc16"];
 const AP={b:[.42,1.55],c:[.62,1.28],y:[.95,1.04],a:[1,1],e:[.93,1]};
-function mk(role,i){const R=ROLES.find(r=>r.id==role);return{r:role,a:R.a,g:R.g,sk:SKIN[2+(i%3)],hc:R.a=="e"?"#e5e7eb":HC[i%3],hs:R.g=="f"?(R.a=="c"||R.a=="b"?"braid":"long"):(R.a=="e"?"bald":"short"),tall:1,bld:1,of:R.a=="c"&&R.g=="f"?"dress":"mod",col:COLS[i%8],beard:R.g=="m"&&(R.a=="e"||(R.a=="a"&&i%2==0))?1:0,img:null,vf:"n",att:"n",ip:"s",fc:"auto"}}
+function mk(role,i){const R=ROLES.find(r=>r.id==role);return{r:role,a:R.a,g:R.g,sk:SKIN[2+(i%3)],hc:R.a=="e"?"#e5e7eb":HC[i%3],hs:R.g=="f"?(R.a=="c"||R.a=="b"?"braid":"long"):(R.a=="e"?"bald":"short"),tall:1,bld:1,of:R.a=="c"&&R.g=="f"?"dress":"mod",col:COLS[i%8],beard:R.g=="m"&&(R.a=="e"||(R.a=="a"&&i%2==0))?1:0,img:null,vf:"n",att:"n",ip:"s",fc:"auto",px:"a",dp:"m",gn:"g"}}
 const SEG=(a,d,x)=>({a,d,e:"auto",x:x||"",s:"s",v:null,vd:0});
 
 
@@ -89,13 +89,14 @@ const LCOL={act:"#3b82f6",say:"#ec4899",emo:"#f59e0b",cam:"#a855f7",mus:"#10b981
 
 
 const EX=[{cat:0,roles:["man","wom"],scene:0,genre:"c",st:[[0,"wave",0],[1,"cheer",1]]},{cat:4,roles:["yman","ywom"],scene:0,genre:"n",st:[[0,"ask",0],[1,"hug",1]]},{cat:7,roles:["yman","boy","man"],scene:2,genre:"c",st:[[0,"cheer",0],[1,"kick",1],[2,"cheer",1]]},{cat:5,roles:["man"],scene:5,genre:"n",st:[[0,"drive",0]]},{cat:2,roles:["man","wom","yman","eman"],scene:0,genre:"n",arr:"circle",att:["n","a","d","a"],st:[[0,"talk",0],[1,"talk",1],[2,"talk",0],[3,"talk",1]]},{cat:3,roles:["wom","boy","girl","boy"],scene:3,genre:"n",arr:"line",att:["n","a","a","d"],st:[[0,"teach",0],[1,"raise",1],[0,"talk",1],[2,"talk",0]]}];
-let st={arr:"line",cast:[],act:[],say:[],emo:[],cam:[],mus:[],sfx:[],scn:[],layer:"act",tab:0,open:0,genre:"n",q:720,ratio:"9:16",lang:L.lang||"",cat:0,scene:0,mu:-1,nm:""},inst=null,url="",DUR=15,PL=null,TLX=0,MVOL=1;
+let st={arr:"line",tod:"day",wx:"none",cast:[],act:[],say:[],emo:[],cam:[],mus:[],sfx:[],scn:[],open:0,genre:"n",q:720,ratio:"9:16",lang:L.lang||"",cat:0,scene:0,mu:-1,nm:""},inst=null,url="",DUR=15,PL=null,TLX=0,MVOL=1;
 addEventListener("beforeinstallprompt",e=>{e.preventDefault();inst=e;if(st.lang)home()});
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const dl=(d,t)=>d<60?Math.round(d)+" "+t.sec:(d/60).toFixed(1)+" "+t.min;
 const mkA=(a,s,d)=>({a,s,d,p:"s"}),mkS=(x,s,d)=>({x,s,d,v:null,vd:0,buf:null});
-function build(roles,steps){const m=C[st.cat].m[st.lang];st.cast=roles.map((r,i)=>mk(r,i));st.act=st.cast.map(()=>[]);st.say=st.cast.map(()=>[]);st.emo=st.cast.map(()=>[]);st.cam=[];st.sfx=[];st.scn=[];st.mus=[{t:"auto",s:0,d:0,vol:100}];
-steps.forEach(([w,a,k],i)=>st.cast.forEach((_,j)=>{if(j==w){st.act[j].push(mkA(a,i*4,4));st.say[j].push(mkS(m[k],i*4+.2,3.6))}else st.act[j].push(mkA("listen",i*4,4))}));st.tab=0;st.open=0;st.layer="act";PL=null}
+function build(roles,steps){const m=C[st.cat].m[st.lang];st.cast=roles.map((r,i)=>mk(r,i));const N=()=>st.cast.map(()=>[]);st.act=N();st.say=N();st.emo=N();st.cam=N();st.sfx=N();st.scn=N();st.mus=st.cast.map((_,i)=>i==0?[{t:"auto",s:0,d:0,vol:100}]:[]);
+steps.forEach(([w,a,k],i)=>st.cast.forEach((_,j)=>{if(j==w){st.act[j].push(mkA(a,i*4,4));st.say[j].push(mkS(m[k],i*4+.2,3.6))}else st.act[j].push(mkA("listen",i*4,4))}));
+st.say.forEach(a=>{if(!a.length)a.push(mkS("",0,3))});st.open=0;PL=null}
 function defTracks(roles){st.arr="line";build(roles,[[0,"wave",0],[1%roles.length,"talk",1]])}
 function useEx(i){const e=EX[i];st.cat=e.cat;st.scene=e.scene;st.genre=e.genre;st.arr=e.arr||"line";build(e.roles,e.st);if(e.att)e.att.forEach((a,k)=>{st.cast[k].att=a});make()}
 
@@ -220,41 +221,39 @@ else{g.fillStyle="#e5e7eb";g.beginPath();g.ellipse(0,0,115,26,0,0,7);g.fill();g.
 g.save();g.beginPath();g.arc(48,-6,17,0,7);g.clip();g.fillStyle="#bae6fd";g.fillRect(25,-30,50,50);drawP(g,P,48,40,.2,1,{},t);g.restore();g.strokeStyle="#6b7280";g.lineWidth=3;g.beginPath();g.arc(48,-6,17,0,7);g.stroke()}
 g.restore()}
 const genreAt=f=>st.genre=="tc"?(f<.35?"c":f<.8?"t":"c"):st.genre;
-function emoAuto(a,k,f){if(a=="listen")return "neutral";const g=genreAt(f);return g=="c"?(k%2?"laugh":"happy"):g=="t"?(k%2?"cry":"sad"):"happy"}
+function emoAuto(a,P,k,f){if(a=="listen")return "neutral";let gg=P.gn&&P.gn!="g"?P.gn:st.genre;if(gg=="tc")gg=f<.35?"c":f<.8?"t":"c";return gg=="c"?(k%2?"laugh":"happy"):gg=="t"?(k%2?"cry":"sad"):"happy"}
 function eff(c,rate){return c.v?Math.max(c.d,(c.buf?c.buf.duration:c.vd)/rate+.5):c.d}
 function plan(){const V=VW,n=st.cast.length;PL={off:[],scn:[],tot:0};let tot=0;const en=c=>{tot=Math.max(tot,c.s+c._d)};
 st.cast.forEach((P,k)=>{const rate=FR[P.vf]||1,sg=(k+1)*V/(n+1)<V/2?1:-1;
-st.say[k].forEach(c=>{c._d=eff(c,rate);en(c)});st.emo[k].forEach(c=>{c._d=c.d;en(c)});
+st.say[k].forEach(c=>{c._d=eff(c,rate);en(c)});st.emo[k].forEach(c=>{c._d=c.d;en(c)});st.cam[k].forEach(c=>{c._d=c.d;en(c)});st.sfx[k].forEach(c=>{c._d=c.d;en(c)});st.mus[k].forEach(c=>{c._d=c.d;if(c.d>0)en(c)});
 const A=st.act[k].slice().sort((a,b)=>a.s-b.s);let x=0,z=1;
-A.forEach(c=>{c._d=c.d;en(c);c._x0=x;c._z0=z;if(c.a=="walk")x=cl(x+sg*30*c.d,-V*.3,V*.3);if(c.a=="run")x=cl(x+sg*70*c.d,-V*.3,V*.3);if(c.a=="come")z=Math.min(1.5,z*(1+.1*c.d));if(c.a=="away")z=Math.max(.6,z*(1-.08*c.d));c._x1=x;c._z1=z});PL.off[k]=A});
-st.cam.forEach(c=>{c._d=c.d;en(c)});st.sfx.forEach(c=>{c._d=c.d;en(c)});st.mus.forEach(c=>{c._d=c.d;if(c.d>0)en(c)});
-PL.tot=Math.max(1,tot);st.mus.forEach(c=>{if(!(c.d>0))c._d=Math.max(.5,PL.tot-c.s)});PL.scn=st.scn.slice().sort((a,b)=>a.s-b.s);return PL.tot}
+A.forEach(c=>{c._d=c.d;en(c);c._x0=x;c._z0=z;if(c.a=="walk")x=cl(x+sg*30*c.d,-V*.3,V*.3);if(c.a=="run")x=cl(x+sg*70*c.d,-V*.3,V*.3);if(c.a=="come")z=Math.min(1.5,z*(1+.1*c.d));if(c.a=="away")z=Math.max(.6,z*(1-.08*c.d));c._x1=x;c._z1=z});PL.off[k]=A;
+PL.scn[k]=st.scn[k].slice().sort((a,b)=>a.s-b.s)});
+PL.tot=Math.max(1,tot);st.mus.forEach(a=>a.forEach(c=>{if(!(c.d>0))c._d=Math.max(.5,PL.tot-c.s)}));return PL.tot}
 const clipAt=(arr,t)=>{let r=null;for(const c of arr)if(t>=c.s&&t<c.s+c._d)r=c;return r};
 function offs(k,t){let x=0,z=1;for(const c of PL.off[k]){if(t>=c.s+c._d){x=c._x1;z=c._z1}else if(t>=c.s){const u=(t-c.s)/c._d;x=c._x0+(c._x1-c._x0)*u;z=c._z0+(c._z1-c._z0)*u;break}else break}return{x,z}}
-function layout(){const n=st.cast.length,V=VW,per=V>400?6:(n>6?4:3),base=n<=1?440:n==2?400:n<=3?360:n<=6?310:270,A=[];
-if(st.arr=="face"&&n>1){const nl=Math.ceil(n/2);st.cast.forEach((P,i)=>{const left=i<nl,r=left?i:i-nl;let sc=base/216*(1-r*.1);sc=Math.min(sc,V/2/118);A.push({x:left?V*.26+(r%2?V*.07:0):V*.74-(r%2?V*.07:0),y:560-r*62,sc,r})})}
-else if(st.arr=="circle"&&n>2){st.cast.forEach((P,i)=>{const a=Math.PI/2+Math.PI/n+2*Math.PI*i/n,x=V/2+Math.cos(a)*Math.min(V*.34,150),y=532+Math.sin(a)*30,sc=Math.min(base*.8/216*(.8+(y-502)/60*.25),V/n*2.2/118);A.push({x,y,sc,r:0})})}
-else st.cast.forEach((P,i)=>{const r=Math.floor(i/per),c=i%per,cnt=Math.min(per,n-r*per);let sc=base/216*(1-r*.13);sc=Math.min(sc,V/cnt/108);A.push({x:(c+1)*V/(cnt+1)+(r%2?V/(cnt+1)*.25:0),y:560-r*62,sc,r})});return A}
-let CAMST={z:1,cx:180,cy:320};
-function frame(g,t,nm){const V=VW,n=st.cast.length;if(!PL)plan();const LY=layout(),fr=Math.min(1,t/DUR),gn=genreAt(fr);
-let scn={sc:st.scene,tod:"day",wx:"none"};for(const c of PL.scn)if(t>=c.s)scn=c;
-const info=st.cast.map((P,k)=>{const L=LY[k],ac=clipAt(PL.off[k],t),sy=clipAt(st.say[k],t),em=clipAt(st.emo[k],t),o=offs(k,t);
-return{P,k,ac,sy,em,u:ac?cl((t-ac.s)/ac._d,0,1):0,x:L.x+o.x,y:L.y,sc:L.sc*o.z,r:L.r}});
-const spk=info.find(o=>o.sy&&(o.sy.x||o.sy.buf));
-let sh=clipAt(st.cam,t),mode=st.cam.length?(sh?sh.m:"wide"):"auto",who=sh?sh.who:-1,tz=1,tcx=V/2,tcy=320;
-const foc=o=>{const hgt=216*o.sc*AP[o.P.a][0]*o.P.tall;return hgt};
+function layout(ids,V){const n=ids.length,per=V>400?6:(n>6?4:3),base=n<=1?440:n==2?400:n<=3?360:n<=6?310:270,A=[];
+if(st.arr=="face"&&n>1){const nl=Math.ceil(n/2);ids.forEach((id,i)=>{const left=i<nl,r=left?i:i-nl;let sc=base/216*(1-r*.1);sc=Math.min(sc,V/2/118);A.push({x:left?V*.26+(r%2?V*.07:0):V*.74-(r%2?V*.07:0),y:560-r*62,sc,r})})}
+else if(st.arr=="circle"&&n>2){ids.forEach((id,i)=>{const a=Math.PI/2+Math.PI/n+2*Math.PI*i/n,x=V/2+Math.cos(a)*Math.min(V*.34,150),y=532+Math.sin(a)*30,sc=Math.min(base*.8/216*(.8+(y-502)/60*.25),V/n*2.2/118);A.push({x,y,sc,r:0})})}
+else ids.forEach((id,i)=>{const r=Math.floor(i/per),c=i%per,cnt=Math.min(per,n-r*per);let sc=base/216*(1-r*.13);sc=Math.min(sc,V/cnt/108);A.push({x:(c+1)*V/(cnt+1)+(r%2?V/(cnt+1)*.25:0),y:560-r*62,sc,r})});
+ids.forEach((id,i)=>{const P=st.cast[id],L=A[i];if(P.px&&P.px!="a")L.x=V*{l:.2,c:.5,r:.8}[P.px];if(P.dp=="f"){L.y=560;L.sc*=1.05}else if(P.dp=="b"){L.y=500;L.sc*=.85}});return A}
+let CAMA=[];
+function place(k,t){let r={sc:st.scene,tod:st.tod,wx:st.wx};for(const c of PL.scn[k])if(t>=c.s)r=c;return r}
+function drawGroup(g,t,sub,V,pl,gi,fr){const n=sub.length,LY=layout(sub.map(o=>o.k),V);
+sub.forEach((o,i)=>{const L=LY[i];o.x=L.x+o.ox;o.y=L.y;o.sc=L.sc*o.zf;o.r=L.r});
+const spk=sub.find(o=>o.sy&&(o.sy.x||o.sy.buf)),sh=sub.map(o=>({o,c:clipAt(st.cam[o.k],t)})).find(z=>z.c),hasCam=sub.some(o=>st.cam[o.k].length);
+let mode=hasCam?(sh?sh.c.m:"wide"):"auto",tz=1,tcx=V/2,tcy=320;const foc=o=>216*o.sc*AP[o.P.a][0]*o.P.tall;
 if(mode=="auto"){if(spk){tz=n==1?1.3:n<=3?1.7:2;tcx=spk.x;tcy=spk.y-foc(spk)*.6}}
-else if(mode!="wide"){const o=info[Math.min(who,n-1)]||info[0],gx=who<0?info.reduce((a,b)=>a+b.x,0)/n:o.x;
-if(mode=="med"){tz=1.5;tcx=gx;tcy=o.y-foc(o)*.55}else if(mode=="close"){tz=2.2;tcx=gx;tcy=o.y-foc(o)*.82}else{tz=1.6;tcx=gx;tcy=o.y-foc(o)*.5}}
+else if(mode!="wide"){const o=sh.o;if(mode=="med"){tz=1.5;tcy=o.y-foc(o)*.55}else if(mode=="close"){tz=2.2;tcy=o.y-foc(o)*.82}else{tz=1.6;tcy=o.y-foc(o)*.5}tcx=o.x}
 tcx=cl(tcx,V/(2*tz),V-V/(2*tz));tcy=cl(tcy,320/tz,640-320/tz);
-if(t<.05){CAMST={z:tz,cx:tcx,cy:tcy}}else{CAMST.z+=(tz-CAMST.z)*.1;CAMST.cx+=(tcx-CAMST.cx)*.1;CAMST.cy+=(tcy-CAMST.cy)*.1}
-g.save();g.scale(K,K);g.save();g.translate(V/2,320);g.scale(CAMST.z,CAMST.z);g.translate(-CAMST.cx,-CAMST.cy);
-bg(g,scn.sc,t);fx(g,t,gn);
-info.slice().sort((a,b)=>a.y-b.y||a.x-b.x).forEach(o=>{const P=o.P,speaking=o.sy&&(o.sy.x||o.sy.buf);let a=o.ac?o.ac.a:"idle";if(speaking&&(a=="idle"||a=="listen"))a="talk";
+let cs=CAMA[gi];if(!cs||t<.05)cs=CAMA[gi]={z:tz,cx:tcx,cy:tcy};else{cs.z+=(tz-cs.z)*.1;cs.cx+=(tcx-cs.cx)*.1;cs.cy+=(tcy-cs.cy)*.1}
+g.save();g.translate(V/2,320);g.scale(cs.z,cs.z);g.translate(-cs.cx,-cs.cy);
+bg(g,pl.sc,t);fx(g,t,genreAt(fr));
+sub.slice().sort((a,b)=>a.y-b.y||a.x-b.x).forEach(o=>{const P=o.P,speaking=o.sy&&(o.sy.x||o.sy.buf);let a=o.ac?o.ac.a:"idle";if(speaking&&(a=="idle"||a=="listen"))a="talk";
 let p=Object.assign({},DP,(ACT[a]||ACT.idle)(t,o.u));
 if((o.ac?o.ac.p=="t":P.ip=="t")&&!NOSIT.includes(a))Object.assign(p,{ll:1.55,lk:1.5,rl:1.55,rk:1.5});
-p.em=o.em?o.em.e:emoAuto(a,o.k,fr);if(a=="sleep")p.em="sleep";if(speaking)p.sp=1;if(o.sy&&o.sy.buf)p.mo=Math.min(1,AMP*3);
-let tgt=V/2;if(spk&&spk!==o)tgt=spk.x;else if(spk===o&&n>1)tgt=info.filter(q=>q!==o).reduce((s2,q)=>s2+q.x,0)/(n-1);
+p.em=o.em?o.em.e:emoAuto(a,P,o.k,fr);if(a=="sleep")p.em="sleep";if(speaking)p.sp=1;if(o.sy&&o.sy.buf)p.mo=Math.min(1,AMP*3);
+let tgt=V/2;if(spk&&spk!==o)tgt=spk.x;else if(spk===o&&n>1)tgt=sub.filter(q=>q!==o).reduce((s2,q)=>s2+q.x,0)/(n-1);
 let dir=n==1?1:(tgt>o.x?1:-1);if(P.fc=="l")dir=-1;else if(P.fc=="r")dir=1;
 if(spk&&spk!==o){if(P.fc=="auto"&&!["look_l","look_r","look_u","look_d","shake","nod"].includes(a))p.hl=.55;
 if(a=="idle"||a=="listen"){if(P.att=="a"){p.hn=Math.max(0,Sn(t*2.4+o.k))*.14;if(!o.em)p.em="happy"}else if(P.att=="d"){p.hl=.55+Sn(t*5+o.k)*.6;if(!o.em)p.em="neutral"}else{p.hn=Math.max(0,Sn(t*1.8+o.k))*.07;p.ht=.06}}}
@@ -263,14 +262,24 @@ if(VH.includes(a)){veh(g,a,-100+o.u*(V+200),a=="fly"?250+Sn(t*2)*12:o.y,Math.min
 if(a=="kick"){const bx=o.x+dir*(60*o.sc+o.u*90*o.sc);g.fillStyle="#fff";g.strokeStyle="#2a0b3d";g.lineWidth=2;g.beginPath();g.arc(bx,o.y-10,12*o.sc/1.6+6,0,7);g.fill();g.stroke()}
 drawP(g,P,o.x,o.y,o.sc,dir,p,t);
 if(a=="hug"||a=="ask"){g.fillStyle="#f43f8e";g.font="26px sans-serif";g.textAlign="center";g.fillText("♥",o.x+dir*40*o.sc,o.y-190*o.sc*P.tall*AP[P.a][0]-6-Sn(t*3)*6)}});
-if(scn.tod=="eve"){g.fillStyle="rgba(255,120,40,.2)";g.fillRect(0,0,V,640)}
-else if(scn.tod=="night"){g.fillStyle="rgba(10,20,70,.5)";g.fillRect(0,0,V,640);g.fillStyle="#fff";for(let i=0;i<24;i++){g.globalAlpha=.5+.5*Sn(t*2+i);g.fillRect((i*83)%V,(i*37)%260,2,2)}g.globalAlpha=1}
-if(scn.wx=="rain"){g.strokeStyle="rgba(190,215,255,.6)";g.lineWidth=2;for(let i=0;i<60;i++){const x=(i*47+t*60)%V,y=(t*560+i*79)%700-30;g.beginPath();g.moveTo(x,y);g.lineTo(x-6,y+22);g.stroke()}}
-g.restore();
+if(pl.tod=="eve"){g.fillStyle="rgba(255,120,40,.2)";g.fillRect(0,0,V,640)}
+else if(pl.tod=="night"){g.fillStyle="rgba(10,20,70,.5)";g.fillRect(0,0,V,640);g.fillStyle="#fff";for(let i=0;i<24;i++){g.globalAlpha=.5+.5*Sn(t*2+i);g.fillRect((i*83)%V,(i*37)%260,2,2)}g.globalAlpha=1}
+if(pl.wx=="rain"){g.strokeStyle="rgba(190,215,255,.6)";g.lineWidth=2;for(let i=0;i<60;i++){const x=(i*47+t*60)%V,y=(t*560+i*79)%700-30;g.beginPath();g.moveTo(x,y);g.lineTo(x-6,y+22);g.stroke()}}
+g.restore()}
+function frame(g,t,nm){const Wv=VW;if(!PL)plan();const n=st.cast.length,fr=Math.min(1,t/DUR);if(t<.05)CAMA=[];
+const info=st.cast.map((P,k)=>{const ac=clipAt(PL.off[k],t),sy=clipAt(st.say[k],t),em=clipAt(st.emo[k],t),o=offs(k,t),pl=place(k,t);return{P,k,ac,sy,em,u:ac?cl((t-ac.s)/ac._d,0,1):0,ox:o.x,zf:o.z,pl,key:pl.sc+"|"+pl.tod+"|"+pl.wx}});
+const keys=[];info.forEach(o=>{if(!keys.includes(o.key))keys.push(o.key)});const G=keys.length;
+g.save();g.scale(K,K);
+keys.forEach((key,gi)=>{const sub=info.filter(o=>o.key==key);let px=0,py=0,pw=Wv,ph=640;
+if(G==2){if(Wv<640){ph=320;py=gi*320}else{pw=Wv/2;px=gi*pw}}else if(G>2){pw=Wv/2;ph=320;px=(gi%2)*pw;py=Math.floor(gi/2)*320}
+const ks=ph/640,V=pw/ks;if(G>1){g.save();g.beginPath();g.rect(px,py,pw,ph);g.clip();g.translate(px,py);g.scale(ks,ks)}
+VW=V;drawGroup(g,t,sub,V,sub[0].pl,gi,fr);VW=Wv;if(G>1)g.restore()});
+if(G>1){g.fillStyle="#fff";if(G==2){if(Wv<640)g.fillRect(0,318,Wv,4);else g.fillRect(Wv/2-2,0,4,640)}else{g.fillRect(0,318,Wv,4);g.fillRect(Wv/2-2,0,4,640)}}
+const spk=info.find(o=>o.sy&&(o.sy.x||o.sy.buf));
 g.textAlign="center";
-if(spk&&spk.sy.x&&st.sub!==0){const bw=Math.min(V>400?460:320,V-40);g.font="700 19px system-ui,sans-serif";const l=Math.ceil(g.measureText(spk.sy.x).width/(bw-30))||1,h=l*25+18;g.fillStyle="rgba(255,255,255,.93)";rr(g,V/2-bw/2,24,bw,h,16);g.fillStyle="#2a0b3d";wrap(g,spk.sy.x,V/2,50,bw-30,25)}
-if(nm){g.font="700 20px system-ui,sans-serif";g.fillStyle="#fff";g.shadowColor="rgba(0,0,0,.4)";g.shadowBlur=6;g.fillText("— "+nm,V/2,600);g.shadowBlur=0}
-g.font="13px system-ui,sans-serif";g.fillStyle="#fff";g.globalAlpha=.75;g.fillText("Video Ergaa",V/2,628);g.globalAlpha=1;g.restore()}
+if(spk&&spk.sy.x){const bw=Math.min(Wv>400?460:320,Wv-40);g.font="700 19px system-ui,sans-serif";const l=Math.ceil(g.measureText(spk.sy.x).width/(bw-30))||1,h=l*25+18;g.fillStyle="rgba(255,255,255,.93)";rr(g,Wv/2-bw/2,24,bw,h,16);g.fillStyle="#2a0b3d";wrap(g,spk.sy.x,Wv/2,50,bw-30,25)}
+if(nm){g.font="700 20px system-ui,sans-serif";g.fillStyle="#fff";g.shadowColor="rgba(0,0,0,.4)";g.shadowBlur=6;g.fillText("— "+nm,Wv/2,600);g.shadowBlur=0}
+g.font="13px system-ui,sans-serif";g.fillStyle="#fff";g.globalAlpha=.75;g.fillText("Video Ergaa",Wv/2,628);g.globalAlpha=1;g.restore()}
 
 function fx(g,t,gn){const V=VW;if(gn=="t"){g.fillStyle="rgba(25,15,60,.38)";g.fillRect(0,0,V,640);g.strokeStyle="rgba(200,220,255,.55)";g.lineWidth=2;for(let i=0;i<46;i++){const x=(i*61+t*40)%V,y=(t*520+i*83)%700-30;g.beginPath();g.moveTo(x,y);g.lineTo(x-6,y+22);g.stroke()}}
 else if(gn=="c"){const cl=["#f43f8e","#fde047","#22d3ee","#a855f7","#4ade80"];for(let i=0;i<26;i++){g.fillStyle=cl[i%5];g.save();g.translate((i*47+Math.sin(t*2+i)*20)%V,(t*110+i*61)%680-20);g.rotate(t*3+i);g.fillRect(-4,-2,8,4);g.restore()}}}
@@ -331,104 +340,99 @@ $("#mv").onclick=vids;$("#fb").onclick=fbk;document.querySelectorAll("[data-x]")
 
 function roleName(P,l){const R=ROLES.find(r=>r.id==P.r);return R[l]}
 function prev(){document.querySelectorAll("canvas[data-pi]").forEach(c=>{const g=c.getContext("2d");g.clearRect(0,0,c.width,c.height);drawP(g,st.cast[+c.dataset.pi],36,96,.38,1,{},0)})}
-function castUI(){const t=T[st.lang],l=st.lang;$("#cast").innerHTML=st.cast.map((P,k)=>`<details class="step" style="display:block" ${k==st.open?"open":""}><summary style="display:flex;gap:10px;align-items:center;cursor:pointer"><canvas data-pi="${k}" width="72" height="100" style="width:48px;height:66px;margin:0;background:none"></canvas><b>#${k+1} ${esc(roleName(P,l))}</b></summary>
-<div class="g2"><label>${t.role}<select data-p="${k}" data-f="r">${ROLES.map(r=>`<option value="${r.id}" ${P.r==r.id?"selected":""}>${r[l]}</option>`).join("")}</select></label>
-<label>${t.hgt}<select data-p="${k}" data-f="tall">${TALLS.map(x=>`<option value="${x[0]}" ${P.tall==x[0]?"selected":""}>${nm3(x,l)}</option>`).join("")}</select></label>
-<label>${t.bld}<select data-p="${k}" data-f="bld">${BLDS.map(x=>`<option value="${x[0]}" ${P.bld==x[0]?"selected":""}>${nm3(x,l)}</option>`).join("")}</select></label>
-<label>${t.hrs}<select data-p="${k}" data-f="hs">${HS.map(x=>`<option value="${x[0]}" ${P.hs==x[0]?"selected":""}>${nm3(x,l)}</option>`).join("")}</select></label>
-<label>${t.fo}<select data-p="${k}" data-f="of">${OF.concat([["dress","Uffata dubartii","ቀሚስ","Dress"],["school","Uffata barumsaa","የትምህርት ቤት ልብስ","School uniform"]]).map(x=>`<option value="${x[0]}" ${P.of==x[0]?"selected":""}>${nm3(x,l)}</option>`).join("")}</select></label>
-<label>${t.vcx}<select data-p="${k}" data-f="vf">${FX.map(x=>`<option value="${x[0]}" ${P.vf==x[0]?"selected":""}>${nm3(x,l)}</option>`).join("")}</select></label>
-<label>${t.att}<select data-p="${k}" data-f="att">${ATT.map(x=>`<option value="${x[0]}" ${P.att==x[0]?"selected":""}>${nm3(x,l)}</option>`).join("")}</select></label>
-<label>${t.ipos}<select data-p="${k}" data-f="ip">${POST.map(x=>`<option value="${x[0]}" ${P.ip==x[0]?"selected":""}>${nm3(x,l)}</option>`).join("")}</select></label>
-<label>${t.fcg}<select data-p="${k}" data-f="fc">${FACE.map(x=>`<option value="${x[0]}" ${P.fc==x[0]?"selected":""}>${nm3(x,l)}</option>`).join("")}</select></label>
-<label>${t.hcl}<input type="color" data-p="${k}" data-f="hc" value="${P.hc}" style="height:42px;padding:2px"></label>
-<label>${t.fo}<input type="color" data-p="${k}" data-f="col" value="${P.col}" style="height:42px;padding:2px"></label></div>
+const SECI={act:"▶",say:"💬",emo:"🙂",cam:"🎥",mus:"🎵",sfx:"🔊",scn:"🏞"},SECS=["act","say","emo","cam","mus","sfx","scn"],LAYN=L=>LAY.find(x=>x[0]==L);
+const PXS=[["a","Ofumaa","አውቶ","Auto"],["l","Bitaa","ግራ","Left"],["c","Giddu","መሃል","Center"],["r","Mirga","ቀኝ","Right"]],DPS=[["m","Giddu","መካከል","Middle"],["f","Fuula duraa","ፊት","Front"],["b","Duuba","ኋላ","Back"]],PGN=[["g","Akka garee","እንደ ቡድኑ","Like the group"],["n","Baratamaa","መደበኛ","Normal"],["c","Kolfaa (Comedy)","ኮሜዲ","Comedy"],["t","Gaddaa (Tragedy)","ትራጀዲ","Tragedy"],["tc","Kolfaa fi gaddaa","ትራጂ-ኮሜዲ","Tragicomedy"]];
+const sel=(k,f,L,v,l)=>`<select data-p="${k}" data-f="${f}">${L.map(x=>`<option value="${x[0]}" ${String(v)==String(x[0])?"selected":""}>${nm3(x,l)}</option>`).join("")}</select>`;
+function castUI(){const t=T[st.lang],l=st.lang;$("#cast").innerHTML=st.cast.map((P,k)=>`<details class="step pc" style="display:block" ${k==st.open?"open":""} data-pk="${k}"><summary style="display:flex;gap:10px;align-items:center;cursor:pointer"><canvas data-pi="${k}" width="72" height="100" style="width:48px;height:66px;margin:0;background:none"></canvas><b>#${k+1} ${esc(roleName(P,l))}</b></summary>
+<details class="sub"><summary>👤 ${t.role} / ${t.fo}</summary><div class="g2"><label>${t.role}<select data-p="${k}" data-f="r">${ROLES.map(r=>`<option value="${r.id}" ${P.r==r.id?"selected":""}>${r[l]}</option>`).join("")}</select></label>
+<label>${t.hgt}${sel(k,"tall",TALLS,P.tall,l)}</label><label>${t.bld}${sel(k,"bld",BLDS,P.bld,l)}</label><label>${t.hrs}${sel(k,"hs",HS,P.hs,l)}</label>
+<label>${t.fo}${sel(k,"of",OF.concat([["dress","Uffata dubartii","ቀሚስ","Dress"],["school","Uffata barumsaa","የትምህርት ቤት ልብስ","School uniform"]]),P.of,l)}</label><label>${t.vcx}${sel(k,"vf",FX,P.vf,l)}</label>
+<label>${t.hcl}<input type="color" data-p="${k}" data-f="hc" value="${P.hc}" style="height:42px;padding:2px"></label><label>${t.fo}<input type="color" data-p="${k}" data-f="col" value="${P.col}" style="height:42px;padding:2px"></label></div>
 <div class="row" style="margin-top:6px">${SKIN.map(c=>`<button class="chip ${P.sk==c?"on":""}" data-sk="${k}" data-c="${c}" style="background:${c};width:38px;height:38px;padding:0" aria-label="skin"></button>`).join("")}<label class="chip"><input type="checkbox" data-p="${k}" data-f="beard" ${P.beard?"checked":""} style="width:auto"> ${t.bd}</label></div>
-<div class="row"><label class="chip">${t.ph}<input type="file" accept="image/*" data-ph="${k}" hidden></label>${P.img?`<button class="chip" data-rmp="${k}">✕ ${t.ph}</button>`:""}<button class="chip" data-del="${k}">🗑 ${t.rm}</button></div></details>`).join("");
+<div class="row"><label class="chip">${t.ph}<input type="file" accept="image/*" data-ph="${k}" hidden></label>${P.img?`<button class="chip" data-rmp="${k}">✕ ${t.ph}</button>`:""}</div></details>
+${SECS.map(L=>`<details class="sub" data-sec="${L}:${k}"><summary id="sm-${L}-${k}">${SECI[L]} ${nm3(LAYN(L),l)} (${st[L][k].length})</summary><div class="body" id="b-${L}-${k}"></div></details>`).join("")}
+<details class="sub"><summary>🎭 ${t.pos} · ${t.gn}</summary><div class="g2"><label>${t.pos}${sel(k,"px",PXS,P.px,l)}</label><label>${t.dpt}${sel(k,"dp",DPS,P.dp,l)}</label><label>${t.fcg}${sel(k,"fc",FACE,P.fc,l)}</label><label>${t.ipos}${sel(k,"ip",POST,P.ip,l)}</label><label>${t.att}${sel(k,"att",ATT,P.att,l)}</label><label>${t.tn}${sel(k,"gn",PGN,P.gn,l)}</label></div></details>
+<div class="row" style="margin-top:6px"><button class="chip" data-del="${k}">🗑 ${t.rm}</button></div></details>`).join("");
 document.querySelectorAll("[data-f]").forEach(e=>{const h=()=>{const k=+e.dataset.p,f=e.dataset.f,P=st.cast[k];
-if(f=="r"){const old=st.cast[k];st.cast[k]=Object.assign(mk(e.value,k),{img:old.img});st.open=k;castUI();tabs();prev();return}
-P[f]=e.type=="checkbox"?(e.checked?1:0):(f=="tall"||f=="bld"?+e.value:e.value);prev()};e.onchange=h;e.oninput=h});
+if(f=="r"){const old=st.cast[k];st.cast[k]=Object.assign(mk(e.value,k),{img:old.img});st.open=k;castUI();prev();return}
+P[f]=e.type=="checkbox"?(e.checked?1:0):(f=="tall"||f=="bld"?+e.value:e.value);PL=null;prev()};e.onchange=h;e.oninput=h});
+document.querySelectorAll("[data-sec]").forEach(d=>{const[L,k]=d.dataset.sec.split(":");d.addEventListener("toggle",()=>{if(d.open)secRender(L,+k)})});
 document.querySelectorAll("[data-sk]").forEach(b=>b.onclick=()=>{st.cast[+b.dataset.sk].sk=b.dataset.c;st.open=+b.dataset.sk;castUI();prev()});
 document.querySelectorAll("[data-ph]").forEach(e=>e.onchange=()=>{const f=e.files[0],k=+e.dataset.ph;if(!f)return;const im=new Image();im.onload=()=>{st.cast[k].img=im;st.open=k;castUI();prev()};im.src=URL.createObjectURL(f)});
 document.querySelectorAll("[data-rmp]").forEach(e=>e.onclick=()=>{st.cast[+e.dataset.rmp].img=null;castUI();prev()});
-document.querySelectorAll("[data-del]").forEach(e=>e.onclick=()=>{if(st.cast.length>1){const k=+e.dataset.del;[st.cast,st.act,st.say,st.emo].forEach(a=>a.splice(k,1));st.cam.forEach(c=>{if(c.who>=st.cast.length)c.who=-1});st.tab=0;st.open=0;PL=null;castUI();tabs();prev()}});
+document.querySelectorAll("[data-del]").forEach(e=>e.onclick=()=>{if(st.cast.length>1){const k=+e.dataset.del;[st.cast,st.act,st.say,st.emo,st.cam,st.mus,st.sfx,st.scn].forEach(a=>a.splice(k,1));st.open=0;PL=null;castUI();prev();upd()}});
 prev()}
-const arrOf=(L,k)=>PERSON.includes(L)?st[L][k]:st[L];
-function tabs(){const l=st.lang;if(st.tab>=st.cast.length)st.tab=0;
-$("#lays").innerHTML=LAY.map(x=>`<button class="chip ${st.layer==x[0]?"on":""}" data-ly="${x[0]}" style="border-bottom:4px solid ${LCOL[x[0]]}">${nm3(x,l)}</button>`).join("");
-$("#tabs").innerHTML=PERSON.includes(st.layer)?st.cast.map((P,k)=>`<button class="chip ${k==st.tab?"on":""}" data-tab="${k}">#${k+1} ${esc(roleName(P,l))}</button>`).join(""):"";
-if($("#turns"))$("#turns").style.display=st.layer=="say"?"block":"none";
-document.querySelectorAll("[data-ly]").forEach(b=>b.onclick=()=>{st.layer=b.dataset.ly;tabs()});
-document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{st.tab=+b.dataset.tab;tabs()});segs()}
 const opt=(L,v,l)=>L.map(x=>`<option value="${x[0]}" ${String(v)==String(x[0])?"selected":""}>${nm3(x,l)}</option>`).join("");
 const nin=(f,i,v,t,min,step)=>`<label class="lb">${t}<input class="n" type="number" min="${min||0}" step="${step||.5}" value="${v}" data-f2="${f}" data-i="${i}"></label>`;
-function segs(){const t=T[st.lang],l=st.lang,L=st.layer,k=PERSON.includes(L)?st.tab:-1,arr=arrOf(L,k)||[];
-$("#segs").innerHTML=arr.map((c,i)=>{let h="";
-if(L=="act")h=`<select data-f2="a" data-i="${i}">${ACN.map(a=>`<option value="${a[0]}" ${c.a==a[0]?"selected":""}>${nm3(a,l)}</option>`).join("")}</select><select data-f2="p" data-i="${i}">${opt(POST,c.p,l)}</select>${nin("s",i,c.s,t.st0)}${nin("d",i,c.d,t.du)}`;
-else if(L=="say")h=`<input type="text" data-f2="x" data-i="${i}" maxlength="90" placeholder="${t.say}" value="${esc(c.x)}" style="grid-column:1/-1">${nin("s",i,c.s,t.st0)}${nin("d",i,c.d,t.du)}<button class="mic" data-mic="${i}" aria-label="mic">${mr&&mi==i&&mk2==k?"⏹":"🎤"}</button>${c.v?`<div class="vo">✓ ${c.vd.toFixed(1)} ${t.sec}<button data-pl="${i}">▶</button><button data-dv="${i}">🗑</button></div>`:""}`;
-else if(L=="emo")h=`<select data-f2="e" data-i="${i}">${EM.map(x=>`<option value="${x[0]}" ${c.e==x[0]?"selected":""}>${nm3(x,l)}</option>`).join("")}</select>${nin("s",i,c.s,t.st0)}${nin("d",i,c.d,t.du)}`;
-else if(L=="cam")h=`<select data-f2="m" data-i="${i}">${opt(SHOT,c.m,l)}</select><select data-f2="who" data-i="${i}"><option value="-1" ${c.who<0?"selected":""}>${t.wk}: *</option>${st.cast.map((P,j)=>`<option value="${j}" ${c.who==j?"selected":""}>#${j+1}</option>`).join("")}</select>${nin("s",i,c.s,t.st0)}${nin("d",i,c.d,t.du)}`;
-else if(L=="mus")h=`<select data-f2="t" data-i="${i}">${opt(MUST,c.t,l)}</select>${nin("vol",i,c.vol,t.vol,0,10)}${nin("s",i,c.s,t.st0)}${nin("d",i,c.d,t.du+" ("+t.endn+")")}${c.t=="file"?`<label class="chip" style="grid-column:1/-1">🎵 ${c.f?esc(c.f.name):t.sg}<input type="file" accept="audio/*" data-mf="${i}" hidden></label><p class="note" style="grid-column:1/-1">${t.sgn}</p>`:""}`;
-else if(L=="sfx")h=`<select data-f2="k" data-i="${i}">${opt(SFXL,c.k,l)}</select>${nin("vol",i,c.vol,t.vol,0,10)}${nin("s",i,c.s,t.st0)}${nin("d",i,c.d,t.du)}`;
-else h=`<select data-f2="sc" data-i="${i}">${SC.map((s,j)=>`<option value="${j}" ${c.sc==j?"selected":""}>${s[l]}</option>`).join("")}</select><select data-f2="tod" data-i="${i}">${opt(TOD,c.tod,l)}</select><select data-f2="wx" data-i="${i}">${opt(WXL,c.wx,l)}</select>${nin("s",i,c.s,t.st0)}`;
-return `<div class="step clip">${h}<button class="x" data-x="${i}" aria-label="x">✕</button></div>`}).join("");
-const S=i=>arrOf(L,k)[+i],NUM=["s","d","vol","who","sc"];
-document.querySelectorAll("[data-f2]").forEach(e=>{const h=()=>{const c=S(e.dataset.i),f=e.dataset.f2;c[f]=e.type=="text"?e.value:(e.tagName=="SELECT"&&!NUM.includes(f)?e.value:+e.value);if(f=="d"&&c.d<0)c.d=0;if(f!="x")upd()};e.onchange=h;if(e.type=="text")e.oninput=h});
-document.querySelectorAll("[data-mic]").forEach(e=>e.onclick=()=>mic(k,+e.dataset.mic));
-document.querySelectorAll("[data-pl]").forEach(e=>e.onclick=()=>new Audio(URL.createObjectURL(S(e.dataset.pl).v)).play());
-document.querySelectorAll("[data-dv]").forEach(e=>e.onclick=()=>{const c=S(e.dataset.dv);c.v=null;c.vd=0;c.buf=null;segs()});
-document.querySelectorAll("[data-mf]").forEach(e=>e.onchange=()=>{const c=S(e.dataset.mf);c.f=e.files[0]||null;segs()});
-document.querySelectorAll("[data-x]").forEach(e=>e.onclick=()=>{arr.splice(+e.dataset.x,1);segs()});upd()}
-function autoTurns(){const all=[];st.say.forEach((arr,k)=>arr.forEach(c=>all.push({c,k})));all.sort((a,b)=>a.c.s-b.c.s);let cur=0;all.forEach(({c,k})=>{c.s=+cur.toFixed(1);cur+=eff(c,FR[st.cast[k].vf]||1)+.4});PL=null}
-function addClip(){const L=st.layer,k=PERSON.includes(L)?st.tab:-1,arr=arrOf(L,k),s=arr.reduce((a,c)=>Math.max(a,c.s+(c.d||0)),0);
-arr.push(L=="act"?mkA("talk",s,3):L=="say"?mkS("",s,3):L=="emo"?{e:"happy",s,d:3}:L=="cam"?{m:"close",who:0,s,d:3}:L=="mus"?{t:"c0",s,d:0,vol:80}:L=="sfx"?{k:"steps",s,d:4,vol:80}:{sc:st.scene,tod:"day",wx:"none",s});segs()}
-function tline(){const t=T[st.lang],tot=PL.tot,row=(lab,arr,c)=>`<div class="tr"><span>${lab}</span><div>${arr.map(x=>`<i style="left:${(x.s/tot*100).toFixed(1)}%;width:${Math.max(1.2,((x._d||1)/tot*100)).toFixed(1)}%;background:${c}"></i>`).join("")}</div></div>`;
-let h=st.cast.map((P,k)=>row("#"+(k+1)+" ▶",PL.off[k],LCOL.act)+row("#"+(k+1)+" 💬",st.say[k],LCOL.say)).join("");
-h+=row("🎥",st.cam,LCOL.cam)+row("🎵",st.mus,LCOL.mus)+row("🔊",st.sfx,LCOL.sfx)+row("🏞",st.scn.map(c=>Object.assign({},c,{_d:1})),LCOL.scn);$("#tl").innerHTML=h}
+function clipHTML(L,c,i,k){const t=T[st.lang],l=st.lang;
+if(L=="act")return `<select data-f2="a" data-i="${i}">${ACN.map(a=>`<option value="${a[0]}" ${c.a==a[0]?"selected":""}>${nm3(a,l)}</option>`).join("")}</select><select data-f2="p" data-i="${i}">${opt(POST,c.p,l)}</select>${nin("s",i,c.s,t.st0)}${nin("d",i,c.d,t.du)}`;
+if(L=="say")return `<input type="text" data-f2="x" data-i="${i}" maxlength="90" placeholder="${t.say}" value="${esc(c.x)}" style="grid-column:1/-1">${nin("s",i,c.s,t.st0)}${nin("d",i,c.d,t.du)}<button class="mic" data-mic="${i}" aria-label="mic">${mr&&mi==i&&mk2==k?"⏹":"🎤"}</button>${c.v?`<div class="vo">✓ ${c.vd.toFixed(1)} ${t.sec}<button data-pl="${i}">▶</button><button data-dv="${i}">🗑</button></div>`:""}`;
+if(L=="emo")return `<select data-f2="e" data-i="${i}">${EM.map(x=>`<option value="${x[0]}" ${c.e==x[0]?"selected":""}>${nm3(x,l)}</option>`).join("")}</select>${nin("s",i,c.s,t.st0)}${nin("d",i,c.d,t.du)}`;
+if(L=="cam")return `<select data-f2="m" data-i="${i}">${opt(SHOT,c.m,l)}</select>${nin("s",i,c.s,t.st0)}${nin("d",i,c.d,t.du)}`;
+if(L=="mus")return `<select data-f2="t" data-i="${i}">${opt(MUST,c.t,l)}</select>${nin("vol",i,c.vol,t.vol,0,10)}${nin("s",i,c.s,t.st0)}${nin("d",i,c.d,t.du+" ("+t.endn+")")}${c.t=="file"?`<label class="chip" style="grid-column:1/-1">🎵 ${c.f?esc(c.f.name):t.sg}<input type="file" accept="audio/*" data-mf="${i}" hidden></label><p class="note" style="grid-column:1/-1">${t.sgn}</p>`:""}`;
+if(L=="sfx")return `<select data-f2="k" data-i="${i}">${opt(SFXL,c.k,l)}</select>${nin("vol",i,c.vol,t.vol,0,10)}${nin("s",i,c.s,t.st0)}${nin("d",i,c.d,t.du)}`;
+return `<select data-f2="sc" data-i="${i}">${SC.map((s,j)=>`<option value="${j}" ${c.sc==j?"selected":""}>${s[l]}</option>`).join("")}</select><select data-f2="tod" data-i="${i}">${opt(TOD,c.tod,l)}</select><select data-f2="wx" data-i="${i}">${opt(WXL,c.wx,l)}</select>${nin("s",i,c.s,t.st0)}`}
+function secRender(L,k){const box=$("#b-"+L+"-"+k);if(!box)return;const t=T[st.lang],l=st.lang,arr=st[L][k];
+box.innerHTML=arr.map((c,i)=>`<div class="step clip">${clipHTML(L,c,i,k)}<button class="x" data-x="${i}" aria-label="x">✕</button></div>`).join("")+`<button class="go alt" data-add="1" style="margin-top:4px">${t.addc}</button>`;
+const NUM=["s","d","vol"];
+box.querySelectorAll("[data-f2]").forEach(e=>{const h=()=>{const c=arr[+e.dataset.i],f=e.dataset.f2;c[f]=e.type=="text"?e.value:(e.tagName=="SELECT"&&f!="sc"?e.value:+e.value);if(f=="d"&&c.d<0)c.d=0;if(f!="x")upd()};e.onchange=h;if(e.type=="text")e.oninput=h});
+box.querySelectorAll("[data-mic]").forEach(e=>e.onclick=()=>mic(k,+e.dataset.mic));
+box.querySelectorAll("[data-pl]").forEach(e=>e.onclick=()=>new Audio(URL.createObjectURL(arr[+e.dataset.pl].v)).play());
+box.querySelectorAll("[data-dv]").forEach(e=>e.onclick=()=>{const c=arr[+e.dataset.dv];c.v=null;c.vd=0;c.buf=null;secRender(L,k)});
+box.querySelectorAll("[data-mf]").forEach(e=>e.onchange=()=>{arr[+e.dataset.mf].f=e.files[0]||null;secRender(L,k)});
+box.querySelectorAll("[data-x]").forEach(e=>e.onclick=()=>{arr.splice(+e.dataset.x,1);secRender(L,k)});
+box.querySelectorAll("[data-add]").forEach(e=>e.onclick=()=>{const s=arr.reduce((a,c)=>Math.max(a,c.s+(c.d||0)),0);
+arr.push(L=="act"?mkA("talk",s,3):L=="say"?mkS("",s,3):L=="emo"?{e:"happy",s,d:3}:L=="cam"?{m:"close",s,d:3}:L=="mus"?{t:"c0",s,d:0,vol:80}:L=="sfx"?{k:"steps",s,d:4,vol:80}:{sc:st.scene,tod:"day",wx:"none",s});secRender(L,k)});
+const sm=$("#sm-"+L+"-"+k);if(sm)sm.textContent=SECI[L]+" "+nm3(LAYN(L),l)+" ("+arr.length+")";upd()}
+function autoTurns(){const all=[];st.say.forEach((arr,k)=>arr.forEach(c=>{if(c.x||c.v)all.push({c,k})}));all.sort((a,b)=>a.c.s-b.c.s);let cur=0;all.forEach(({c,k})=>{c.s=+cur.toFixed(1);cur+=eff(c,FR[st.cast[k].vf]||1)+.4});PL=null;document.querySelectorAll("[data-sec^=say]").forEach(d=>{if(d.open){const[L,k]=d.dataset.sec.split(":");secRender(L,+k)}});upd()}
+function tline(){const tot=PL.tot,row=(lab,arr,c)=>`<div class="tr"><span>${lab}</span><div>${arr.map(x=>`<i style="left:${(x.s/tot*100).toFixed(1)}%;width:${Math.max(1.2,((x._d||1)/tot*100)).toFixed(1)}%;background:${c}"></i>`).join("")}</div></div>`;
+const fl=a=>[].concat(...a);let h=st.cast.map((P,k)=>row("#"+(k+1)+" ▶",PL.off[k],LCOL.act)+row("#"+(k+1)+" 💬",st.say[k].filter(c=>c.x||c.v),LCOL.say)).join("");
+h+=row("🎥",fl(st.cam),LCOL.cam)+row("🎵",fl(st.mus),LCOL.mus)+row("🔊",fl(st.sfx),LCOL.sfx)+row("🏞",fl(st.scn).map(c=>Object.assign({},c,{_d:1})),LCOL.scn);$("#tl").innerHTML=h}
 function upd(){PL=null;const t=T[st.lang],tot=plan();TLX=tot;if($("#len"))$("#len").textContent=t.len+": "+dl(tot,t);if($("#tl"))tline();est()}
 function est(){const t=T[st.lang],m=Math.max(1,Math.round(BR[st.q]*(TLX||15)/8e6));if($("#est"))$("#est").textContent=t.est+": ~"+m+" MB"+(st.q>=1440?" · "+t.nt:"")+(CFG.ads&&TLX>15?" · 🎁 "+t.adn:"")}
 let mr=null,mi=-1,mk2=0,mst=0,mch=[];
 async function mic(k,i){if(mr){mr.stop();return}
 try{const ms=await navigator.mediaDevices.getUserMedia({audio:true});mch=[];mr=new MediaRecorder(ms);mi=i;mk2=k;mst=Date.now();mr.ondataavailable=e=>mch.push(e.data);
-mr.onstop=()=>{ms.getTracks().forEach(x=>x.stop());const c=st.say[mk2]&&st.say[mk2][mi];if(c){c.v=new Blob(mch,{type:mr.mimeType});c.vd=(Date.now()-mst)/1000;c.buf=null}mr=null;segs()};mr.start();segs()}catch(e){alert(T[st.lang].merr)}}
+mr.onstop=()=>{ms.getTracks().forEach(x=>x.stop());const c=st.say[mk2]&&st.say[mk2][mi];if(c){c.v=new Blob(mch,{type:mr.mimeType});c.vd=(Date.now()-mst)/1000;c.buf=null}mr=null;secRender("say",mk2)};mr.start();secRender("say",k)}catch(e){alert(T[st.lang].merr)}}
 function make(){setFmt(st.ratio);const t=T[st.lang],l=st.lang;$("#app").innerHTML=`<div class="top"><h1>${C[st.cat][l]}</h1></div><div class="wrap"><button class="back" id="bk">${t.bk}</button>
-<h2>${t.ppl}</h2><div id="cast"></div><div class="row">${ROLES.map(r=>`<button class="chip" data-ar="${r.id}">+ ${r[l]}</button>`).join("")}</div>
-<h2>${t.sc}</h2><div class="row">${SC.map((s,i)=>`<button class="chip ${i==st.scene?"on":""}" data-s="${i}">${s[l]}</button>`).join("")}</div>
-<h2>${t.arr}</h2><div class="row">${ARR.map(x=>`<button class="chip ${st.arr==x[0]?"on":""}" data-ra="${x[0]}">${nm3(x,l)}</button>`).join("")}</div>
-<h2>${t.gn}</h2><div class="row">${GN.map(x=>`<button class="chip ${st.genre==x[0]?"on":""}" data-g="${x[0]}">${nm3(x,l)}</button>`).join("")}</div>
-<h2>${t.trk}</h2><p class="note">${t.mt}</p><div class="row" id="lays"></div><div class="row" id="tabs"></div><div id="segs"></div><button class="go alt" id="turns" style="margin-top:6px;display:none">${t.turns}</button><button class="go alt" id="adg" style="margin-top:6px">${t.addc}</button>
+<h2>${t.grp}</h2><div class="row">${SC.map((s,i)=>`<button class="chip ${i==st.scene?"on":""}" data-s="${i}">${s[l]}</button>`).join("")}</div>
+<div class="row">${ARR.map(x=>`<button class="chip ${st.arr==x[0]?"on":""}" data-ra="${x[0]}">${nm3(x,l)}</button>`).join("")}</div>
+<div class="row">${GN.map(x=>`<button class="chip ${st.genre==x[0]?"on":""}" data-g="${x[0]}">${nm3(x,l)}</button>`).join("")}</div>
+<div class="g2"><label>${LAYN("scn")[{om:1,am:2,en:3}[l]]}: ${t.tod}<select id="tod">${opt(TOD,st.tod,l)}</select></label><label>${t.wxl}<select id="wx">${opt(WXL,st.wx,l)}</select></label></div>
+<h2>${t.ppl}</h2><button class="go alt" id="turns" style="margin:0 0 8px">${t.turns}</button><div id="cast"></div><div class="row">${ROLES.map(r=>`<button class="chip" data-ar="${r.id}">+ ${r[l]}</button>`).join("")}</div>
 <h2>${t.tlh}</h2><div id="tl"></div><p class="note" id="len"></p>
 <h2>${t.fm}</h2><select id="fm">${Object.keys(RT).map(r=>`<option value="${r}" ${st.ratio==r?"selected":""}>${RT[r][2]}</option>`).join("")}</select>
 <h2>${t.ql}</h2><select id="ql">${QL.map(q=>`<option value="${q[0]}" ${st.q==q[0]?"selected":""}>${q[1]}</option>`).join("")}</select><p class="note" id="est"></p>
 <h2>${t.nm}</h2><input id="nm" maxlength="24" value="${esc(st.nm)}"><button class="go" id="go">${t.mk}</button></div>`;
-$("#bk").onclick=home;castUI();tabs();
-document.querySelectorAll("[data-ar]").forEach(b=>b.onclick=()=>{if(st.cast.length>=8)return;const k=st.cast.length;plan();st.cast.push(mk(b.dataset.ar,k));st.act.push([mkA("listen",0,Math.max(4,PL.tot))]);st.say.push([]);st.emo.push([]);st.open=k;PL=null;castUI();tabs()});
-document.querySelectorAll("[data-s]").forEach(b=>b.onclick=()=>{st.scene=+b.dataset.s;document.querySelectorAll("[data-s]").forEach(x=>x.classList.toggle("on",x==b))});
+$("#bk").onclick=home;castUI();upd();
+document.querySelectorAll("[data-ar]").forEach(b=>b.onclick=()=>{if(st.cast.length>=8)return;const k=st.cast.length;plan();st.cast.push(mk(b.dataset.ar,k));st.act.push([mkA("listen",0,Math.max(4,PL.tot))]);st.say.push([mkS("",0,3)]);st.emo.push([]);st.cam.push([]);st.mus.push([]);st.sfx.push([]);st.scn.push([]);st.open=k;PL=null;castUI();upd()});
+document.querySelectorAll("[data-s]").forEach(b=>b.onclick=()=>{st.scene=+b.dataset.s;PL=null;document.querySelectorAll("[data-s]").forEach(x=>x.classList.toggle("on",x==b))});
+document.querySelectorAll("[data-ra]").forEach(b=>b.onclick=()=>{st.arr=b.dataset.ra;document.querySelectorAll("[data-ra]").forEach(x=>x.classList.toggle("on",x==b))});
 document.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>{st.genre=b.dataset.g;document.querySelectorAll("[data-g]").forEach(x=>x.classList.toggle("on",x==b))});
-document.querySelectorAll("[data-ra]").forEach(b=>b.onclick=()=>{st.arr=b.dataset.ra;document.querySelectorAll("[data-ra]").forEach(x=>x.classList.toggle("on",x==b))});$("#turns").onclick=()=>{autoTurns();segs()};$("#adg").onclick=addClip;$("#fm").onchange=e=>{st.ratio=e.target.value;setFmt(st.ratio);upd()};$("#ql").onchange=e=>{st.q=+e.target.value;est()};$("#nm").oninput=e=>st.nm=e.target.value;$("#go").onclick=record}
+$("#tod").onchange=e=>st.tod=e.target.value;$("#wx").onchange=e=>st.wx=e.target.value;$("#turns").onclick=autoTurns;
+$("#fm").onchange=e=>{st.ratio=e.target.value;setFmt(st.ratio);upd()};$("#ql").onchange=e=>{st.q=+e.target.value;est()};$("#nm").oninput=e=>st.nm=e.target.value;$("#go").onclick=record}
 async function prep(ac,dest){let any=0;const dec=async b=>{try{return await ac.decodeAudioData(await b.arrayBuffer())}catch(e){return null}};
 for(const arr of st.say)for(const c of arr){c.buf=null;if(c.v){c.buf=await dec(c.v);if(c.buf)any=1}}
-for(const c of st.mus){c.buf=null;if(c.t=="file"&&c.f)c.buf=await dec(c.f)}
+for(const arr of st.mus)for(const c of arr){c.buf=null;if(c.t=="file"&&c.f)c.buf=await dec(c.f)}
 PL=null;const tot=plan();DUR=Math.max(1,tot);MG=any?.5:1;an=ac.createAnalyser();an.fftSize=256;an.connect(ac.destination);an.connect(dest)}
 async function record(){plan();if(CFG.ads&&PL.tot>15&&!(await reward())){alert(T[st.lang].adf);return}if(!window.MediaRecorder||!HTMLCanvasElement.prototype.captureStream){err(1);return}try{await record0()}catch(e){err(2)}}
 async function record0(){const t=T[st.lang];setFmt(st.ratio);
 $("#app").innerHTML=`<div class="top"><h1>${t.wt}</h1></div><div class="wrap"><p class="note">${t.keep}</p><canvas id="cv" width="${W}" height="${H}"></canvas></div>`;
 let wl=null;try{wl=await navigator.wakeLock.request("screen")}catch(e){}
 const cv=$("#cv"),g=cv.getContext("2d"),ac=new(window.AudioContext||window.webkitAudioContext)(),dest=ac.createMediaStreamDestination(),s=cv.captureStream(30);
-await prep(ac,dest);const savedMu=st.mu;st.mu=-1;const AUTO=mkStyle();st.mu=savedMu;BT=AUTO?AUTO.bt:.32;
+await prep(ac,dest);const savedMu=st.mu;st.mu=-1;const AUTO=mkStyle();st.mu=savedMu;BT=AUTO?AUTO.bt:.32;const allM=[].concat(...st.mus);
 dest.stream.getAudioTracks().forEach(k=>s.addTrack(k));
 const mt=["video/webm;codecs=vp9,opus","video/webm","video/mp4"].find(m=>window.MediaRecorder&&MediaRecorder.isTypeSupported(m))||"";
 const rec=new MediaRecorder(s,mt?{mimeType:mt,videoBitsPerSecond:BR[st.q]}:{}),ch=[];rec.ondataavailable=e=>e.data.size&&ch.push(e.data);
 rec.onstop=()=>{ac.close();try{wl&&wl.release()}catch(e){}done(new Blob(ch,{type:mt||"video/webm"}),mt.includes("mp4")?"mp4":"webm")};
 const t0=ac.currentTime+.3;let nb=0;const ad=new Uint8Array(an.fftSize);
-st.mus.forEach(c=>{if(c.t=="file"&&c.buf){const sr=ac.createBufferSource(),gn=ac.createGain();sr.buffer=c.buf;sr.loop=true;gn.gain.value=(c.vol/100)*(MG<1?.35:.7);sr.connect(gn);gn.connect(ac.destination);gn.connect(dest);sr.start(t0+c.s);sr.stop(t0+c.s+c._d)}});
+allM.forEach(c=>{if(c.t=="file"&&c.buf){const sr=ac.createBufferSource(),gn=ac.createGain();sr.buffer=c.buf;sr.loop=true;gn.gain.value=(c.vol/100)*(MG<1?.35:.7);sr.connect(gn);gn.connect(ac.destination);gn.connect(dest);sr.start(t0+c.s);sr.stop(t0+c.s+c._d)}});
 st.cast.forEach((P,k)=>{st.say[k].forEach(c=>{if(c.buf){const sr=ac.createBufferSource();sr.buffer=c.buf;sr.playbackRate.value=FR[P.vf]||1;sr.connect(an);sr.start(t0+c.s+.1)}});
-PL.off[k].forEach(c=>{if(VH.includes(c.a))engine(ac,dest,c.a,t0+c.s,c._d)})});
-st.sfx.forEach(c=>sfxPlay(ac,dest,c.k,t0+c.s,c.d,(c.vol||80)/100));
+PL.off[k].forEach(c=>{if(VH.includes(c.a))engine(ac,dest,c.a,t0+c.s,c._d)});st.sfx[k].forEach(c=>sfxPlay(ac,dest,c.k,t0+c.s,c.d,(c.vol||80)/100))});
 rec.start();
 (function lp(){const tt=ac.currentTime-t0;
-while(nb*BT<DUR&&t0+nb*BT<ac.currentTime+6){const tb=nb*BT,m=st.mus.find(c=>c.t!="file"&&tb>=c.s&&tb<c.s+c._d);
-if(m){const sm=st.mu,sy=SY,bm=MG;st.mu=m.t=="auto"?-1:+m.t.slice(1);SY=m.t=="auto"?AUTO:null;MG=bm*(m.vol/100);beat(ac,dest,nb,t0);st.mu=sm;SY=sy;MG=bm}nb++}
+while(nb*BT<DUR&&t0+nb*BT<ac.currentTime+6){const tb=nb*BT,seen=new Set();
+allM.filter(c=>c.t!="file"&&tb>=c.s&&tb<c.s+c._d).forEach(m=>{if(seen.has(m.t))return;seen.add(m.t);const sm=st.mu,sy=SY,bm=MG;st.mu=m.t=="auto"?-1:+m.t.slice(1);SY=m.t=="auto"?AUTO:null;MG=bm*(m.vol/100);beat(ac,dest,nb,t0);st.mu=sm;SY=sy;MG=bm});nb++}
 an.getByteTimeDomainData(ad);let m2=0;for(const v of ad)m2=Math.max(m2,Math.abs(v-128));AMP=AMP*.6+m2/128*.4;
 frame(g,Math.max(0,tt),st.nm.trim());if(tt<DUR)requestAnimationFrame(lp);else rec.stop()})()}
 
